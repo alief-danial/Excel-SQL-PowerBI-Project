@@ -42,3 +42,23 @@ This project demonstrates an end-to-end Data Analytics workflow using **Excel**,
 - Version Control using GitHub.
 
 ## 📂 File Structure
+📦 SalesDashboardProject
+┣ 📄 SalesDashboard_Working.xlsx
+┣ 📄 SalesDashboard_Presentation.xlsx (Read-Only)
+┣ 📄 PowerBI_Dashboard.pbix (optional)
+┣ 📄 README.md
+
+## 🚀 How to View
+1. Open **SalesDashboard_Presentation.xlsx** for a clean, read-only dashboard.
+2. Optional: Open **PowerBI_Dashboard.pbix** in Power BI Desktop.
+3. Explore PivotTables & KPIs in **SalesDashboard_Working.xlsx** for detailed steps.
+
+---
+
+## ✍ Author
+Alief | Aspiring Data Analyst | [LinkedIn Profile](https://linkedin.com/in/alieffadzil)
+
+---
+
+## 📢 Note:
+This is a **mock project** for portfolio purposes. Data is simulated and does not reflect real business information.
