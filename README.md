@@ -43,13 +43,9 @@ This project demonstrates an end-to-end Data Analytics workflow using **Excel**,
 
 ## 📂 File Structure
 📦 SalesDashboardProject
-
 ┣ 📄 SalesDashboard_Working.xlsx
-
 ┣ 📄 SalesDashboard_Presentation.xlsx (Read-Only)
-
 ┣ 📄 PowerBI_Dashboard.pbix (optional)
-
 ┣ 📄 README.md
 
 
