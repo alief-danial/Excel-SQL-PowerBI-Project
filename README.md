@@ -48,6 +48,7 @@ This project demonstrates an end-to-end Data Analytics workflow using **Excel**,
 ┣ 📄 PowerBI_Dashboard.pbix (optional)
 ┣ 📄 README.md
 
+
 ## 🚀 How to View
 1. Open **SalesDashboard_Presentation.xlsx** for a clean, read-only dashboard.
 2. Optional: Open **PowerBI_Dashboard.pbix** in Power BI Desktop.
