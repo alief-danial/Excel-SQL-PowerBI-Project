@@ -5,7 +5,7 @@ This project demonstrates an end-to-end Data Analytics workflow using **Excel**,
 ## 📊 Project Overview
 - **Dataset Source**: [Mockaroo](https://mockaroo.com/)
 - **Scenario**: Simulated Retail Sales Data (Product, Region, Date, Sales Quantity, Price)
-- **Tools Used**: Excel, SQL (optional for DB queries), Power BI
+- **Tools Used**: Excel, SQL (Microsoft SQL Server), Power BI
 
 ## 🛠 Deliverables
 ### 1. Excel Deliverables
@@ -17,13 +17,18 @@ This project demonstrates an end-to-end Data Analytics workflow using **Excel**,
 | KPI Calculation Sheet | Manual formulas for Total Revenue, Average Order Value (AOV). |
 | Sales Dashboard Sheet | Visual Dashboard with Bar, Line, Pie Charts & Slicers. |
 
-### 2. SQL Queries (Optional Enhancement)
-- Basic SELECT, WHERE, GROUP BY queries for Product Sales summaries.
-- Exported result sets were linked back to Power BI.
+### 2. SQL Queries & Views
+| Deliverable | Description |
+|-------------|-------------|
+| SQL Database Schema | Table structure for Sales Data storage. |
+| SQL Views | Pre-built Views for reporting: Top Products, Monthly Sales, AOV, Region-wise Sales, Category-wise Sales. |
+| Sample Queries | SELECT queries for summaries & Power BI integration. |
 
 ### 3. Power BI Dashboard
-- Interactive Dashboard for deeper analytics and filtering.
-- Visualizations replicated from Excel but with enhanced interactivity.
+| Deliverable | Description |
+|-------------|-------------|
+| Power BI Dashboard | Interactive Dashboard with filters, slicers, and drill-down features. |
+| Data Connection | Live SQL Query or Excel Data Source used in Power BI. |
 
 ## 📈 Key Metrics & Features
 - **Total Revenue** by Product Category.
@@ -32,43 +37,43 @@ This project demonstrates an end-to-end Data Analytics workflow using **Excel**,
 - **Average Order Value (AOV)**.
 - **Interactive Slicers** (Category, Date).
 - Clean & minimal **Dashboard Layout (Grid aligned)**.
+- SQL Views to simplify reporting datasets.
+- Power BI for interactive data exploration.
 
 ## 💡 Skills Demonstrated
 - Data Cleaning & Preparation (Excel functions, Power Query).
 - Lookup Functions (XLOOKUP/VLOOKUP).
 - PivotTables & PivotCharts.
 - Dashboard Design Principles (Clean, readable, interactive).
-- Read-only Excel Presentation File Creation.
-- SQL Query Writing (Views, Aggregations).
+- SQL Query Writing (Views, Aggregations, Joins).
+- Power BI Visualizations & Data Modeling.
 - Version Control using GitHub.
 
 ## 📂 File Structure
-<pre> 📦 SalesDashboardProject 
-  ┣ 📄 SalesDashboard_Working.xlsx 
-  ┣ 📄 SalesDashboard_Presentation.xlsx (Read-Only) 
-  ┣ 📄 PowerBI_Dashboard.pbix (optional) 
-  ┣ 📄 SQL_Scripts.sql 
-  ┣ 📄 README.md 
+<pre>
+📦 SalesDashboardProject
+ ┣ 📄 SalesDashboard_Working.xlsx
+ ┣ 📄 SalesDashboard_Presentation.xlsx (Read-Only)
+ ┣ 📄 SQL_Scripts.sql
+ ┣ 📄 PowerBI_Dashboard.pbix (optional)
+ ┗ 📄 README.md
 </pre>
 
 ## 🗂️ SQL Scripts Overview
+The `SQL_Scripts.sql` file contains the **Database Schema**, **Views**, and **Sample Queries**.
 
-The `SQL_Scripts.sql` file contains the **SQL Database Schema**, **Views**, and **Sample Queries** for the Sales Dashboard Project.
-
-### 1. Database Table
-- **Table Name**: `SalesDashboard_Project`
-- **Columns**:
-  | Column Name     | Data Type          | Description                        |
-  |-----------------|-------------------|------------------------------------|
-  | Order_ID         | int                | Unique ID for each order           |
-  | Order_Date       | date               | Date of the transaction            |
-  | Customer_Name    | nvarchar(100)      | Name of the customer               |
-  | Product_Name     | nvarchar(100)      | Name of the product sold           |
-  | Category         | nvarchar(50)       | Product category                   |
-  | Quantity         | int                | Quantity sold                      |
-  | Price            | decimal(18,2)      | Unit price                         |
-  | Total_Sale       | decimal(18,2)      | Total Sale = Price × Quantity      |
-  | Region           | nvarchar(50)       | Sales Region                       |
+### 1. Table Structure: `SalesDashboard_Project`
+| Column Name     | Data Type          | Description                        |
+|-----------------|-------------------|------------------------------------|
+| Order_ID         | int                | Unique ID for each order           |
+| Order_Date       | date               | Date of the transaction            |
+| Customer_Name    | nvarchar(100)      | Name of the customer               |
+| Product_Name     | nvarchar(100)      | Name of the product sold           |
+| Category         | nvarchar(50)       | Product category                   |
+| Quantity         | int                | Quantity sold                      |
+| Price            | decimal(18,2)      | Unit price                         |
+| Total_Sale       | decimal(18,2)      | Total Sale = Price × Quantity      |
+| Region           | nvarchar(50)       | Sales Region                       |
 
 ### 2. Views Created
 | View Name                | Purpose                                  |
@@ -79,7 +84,7 @@ The `SQL_Scripts.sql` file contains the **SQL Database Schema**, **Views**, and 
 | `vw_AverageOrderValue`    | Average Order Value (AOV)                |
 | `vw_SalesByCategory`      | Total Sales Grouped by Category          |
 
-### 3. Sample Query Combining Views
+### 3. Example Query: Combining Views (Master Query)
 ```sql
 SELECT        
     *
@@ -89,35 +94,21 @@ CROSS JOIN dbo.vw_SalesByCategory
 CROSS JOIN dbo.vw_SalesByRegion
 CROSS JOIN dbo.vw_Top5Products;
 
-4. Usage
-Import data into SalesDashboard_Project table.
+```
 
-Use the predefined views for reporting dashboards.
+### 🚀 Usage Instructions
+1. Import Data into SalesDashboard_Project table (via Flat File Import or Manual Entry).
+2. Run SQL_Scripts.sql to create all necessary Views.
+3. Use Views for Reporting — The predefined Views simplify data queries for dashboarding.
+4. Connect Power BI or Excel to SQL Server Database for live data analysis.
+5. Open Excel Dashboards to explore the manual KPI Calculations and PivotTable summaries.
 
-Connect to Power BI or Excel using SQL Server Connection for live reporting.
 
-🚀 How to View
-Open SalesDashboard_Presentation.xlsx for a clean, read-only dashboard.
+### ✍ Author
+Alief | Data Analyst | [LinkedIn Profile](https://www.linkedin.com/in/alieffadzil/)
 
-Optional: Open PowerBI_Dashboard.pbix in Power BI Desktop.
 
-Explore PivotTables & KPIs in SalesDashboard_Working.xlsx for detailed steps.
-
-Optional: Run SQL_Scripts.sql in SQL Server to recreate database tables and views.
-
-✍ Author
-Alief | Aspiring Data Analyst | LinkedIn Profile
-
-📢 Note:
+### 📢 Note:
 This is a mock project for portfolio purposes. Data is simulated and does not reflect real business information.
 
----
-
-You can paste this entire thing into your `README.md`.  
-Then push your `SQL_Scripts.sql` file to GitHub.
-
-### Next:
-1. Upload `SQL_Scripts.sql` file.
-2. Commit message: `Add SQL Scripts for Database Schema & Views`.
-3. After that, do you want me to guide how to create **Power BI .pbix** file structure for GitHub?
 
