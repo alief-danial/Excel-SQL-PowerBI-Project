@@ -104,6 +104,24 @@ CROSS JOIN dbo.vw_Top5Products;
 5. Open Excel Dashboards to explore the manual KPI Calculations and PivotTable summaries.
 
 
+## 🖥 Power BI Dashboard Preview
+
+| Interactive PBIX File | PDF Snapshot | 
+|-----------------------|--------------|
+| [Download Power BI Dashboard (.pbix)](https://github.com/alief-danial/Excel-SQL-PowerBI-Project/blob/main/PowerBI_Dashboard.pbix) | [View Dashboard PDF](https://github.com/alief-danial/Excel-SQL-PowerBI-Project/blob/main/PowerBI_Dashboard.pdf) |
+
+### 📸 Dashboard Screenshots
+<img width="1324" height="760" alt="image" src="https://github.com/user-attachments/assets/3ef3f5aa-b624-45cf-8d4a-37c39b9e9c42" />
+
+
+### Key Highlights:
+- Top 5 Products by Sales (Pie Chart)
+- Monthly Sales Trend (Line Chart)
+- Sales by Region & Category (Bar Charts)
+- Slicers for dynamic filtering (Category, Region, Date)
+
+
+
 ### ✍ Author
 Alief | Data Analyst | [LinkedIn Profile](https://www.linkedin.com/in/alieffadzil/)
 
