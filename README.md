@@ -89,7 +89,7 @@ CROSS JOIN dbo.vw_SalesByCategory
 CROSS JOIN dbo.vw_SalesByRegion
 CROSS JOIN dbo.vw_Top5Products;
 
-###4. Usage
+4. Usage
 Import data into SalesDashboard_Project table.
 
 Use the predefined views for reporting dashboards.
