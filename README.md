@@ -111,7 +111,8 @@ CROSS JOIN dbo.vw_Top5Products;
 | [Download Power BI Dashboard (.pbix)](https://github.com/alief-danial/Excel-SQL-PowerBI-Project/blob/main/PowerBI_Dashboard.pbix) | [View Dashboard PDF](https://github.com/alief-danial/Excel-SQL-PowerBI-Project/blob/main/PowerBI_Dashboard.pdf) |
 
 ### 📸 Dashboard Screenshots
-<img width="1324" height="760" alt="image" src="https://github.com/user-attachments/assets/3ef3f5aa-b624-45cf-8d4a-37c39b9e9c42" />
+<img width="619" height="358" alt="image" src="https://github.com/user-attachments/assets/039acd1a-1376-47ba-97af-50864a274fc3" />
+
 
 
 ### Key Highlights:
