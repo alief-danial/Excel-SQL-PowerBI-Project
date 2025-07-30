@@ -39,6 +39,7 @@ This project demonstrates an end-to-end Data Analytics workflow using **Excel**,
 - PivotTables & PivotCharts.
 - Dashboard Design Principles (Clean, readable, interactive).
 - Read-only Excel Presentation File Creation.
+- SQL Query Writing (Views, Aggregations).
 - Version Control using GitHub.
 
 ## 📂 File Structure
@@ -46,21 +47,77 @@ This project demonstrates an end-to-end Data Analytics workflow using **Excel**,
   ┣ 📄 SalesDashboard_Working.xlsx 
   ┣ 📄 SalesDashboard_Presentation.xlsx (Read-Only) 
   ┣ 📄 PowerBI_Dashboard.pbix (optional) 
+  ┣ 📄 SQL_Scripts.sql 
   ┣ 📄 README.md 
 </pre>
 
+## 🗂️ SQL Scripts Overview
 
-## 🚀 How to View
-1. Open **SalesDashboard_Presentation.xlsx** for a clean, read-only dashboard.
-2. Optional: Open **PowerBI_Dashboard.pbix** in Power BI Desktop.
-3. Explore PivotTables & KPIs in **SalesDashboard_Working.xlsx** for detailed steps.
+The `SQL_Scripts.sql` file contains the **SQL Database Schema**, **Views**, and **Sample Queries** for the Sales Dashboard Project.
+
+### 1. Database Table
+- **Table Name**: `SalesDashboard_Project`
+- **Columns**:
+  | Column Name     | Data Type          | Description                        |
+  |-----------------|-------------------|------------------------------------|
+  | Order_ID         | int                | Unique ID for each order           |
+  | Order_Date       | date               | Date of the transaction            |
+  | Customer_Name    | nvarchar(100)      | Name of the customer               |
+  | Product_Name     | nvarchar(100)      | Name of the product sold           |
+  | Category         | nvarchar(50)       | Product category                   |
+  | Quantity         | int                | Quantity sold                      |
+  | Price            | decimal(18,2)      | Unit price                         |
+  | Total_Sale       | decimal(18,2)      | Total Sale = Price × Quantity      |
+  | Region           | nvarchar(50)       | Sales Region                       |
+
+### 2. Views Created
+| View Name                | Purpose                                  |
+|--------------------------|------------------------------------------|
+| `vw_Top5Products`         | Top 5 Products by Total Sales            |
+| `vw_MonthlySalesTrend`    | Monthly Sales Trend (Year-Month)         |
+| `vw_SalesByRegion`        | Total Sales Grouped by Region            |
+| `vw_AverageOrderValue`    | Average Order Value (AOV)                |
+| `vw_SalesByCategory`      | Total Sales Grouped by Category          |
+
+### 3. Sample Query Combining Views
+```sql
+SELECT        
+    *
+FROM dbo.vw_AverageOrderValue
+CROSS JOIN dbo.vw_MonthlySalesTrend
+CROSS JOIN dbo.vw_SalesByCategory
+CROSS JOIN dbo.vw_SalesByRegion
+CROSS JOIN dbo.vw_Top5Products;
+
+###4. Usage
+Import data into SalesDashboard_Project table.
+
+Use the predefined views for reporting dashboards.
+
+Connect to Power BI or Excel using SQL Server Connection for live reporting.
+
+🚀 How to View
+Open SalesDashboard_Presentation.xlsx for a clean, read-only dashboard.
+
+Optional: Open PowerBI_Dashboard.pbix in Power BI Desktop.
+
+Explore PivotTables & KPIs in SalesDashboard_Working.xlsx for detailed steps.
+
+Optional: Run SQL_Scripts.sql in SQL Server to recreate database tables and views.
+
+✍ Author
+Alief | Aspiring Data Analyst | LinkedIn Profile
+
+📢 Note:
+This is a mock project for portfolio purposes. Data is simulated and does not reflect real business information.
 
 ---
 
-## ✍ Author
-Alief | Aspiring Data Analyst | [LinkedIn Profile](https://linkedin.com/in/alieffadzil)
+You can paste this entire thing into your `README.md`.  
+Then push your `SQL_Scripts.sql` file to GitHub.
 
----
+### Next:
+1. Upload `SQL_Scripts.sql` file.
+2. Commit message: `Add SQL Scripts for Database Schema & Views`.
+3. After that, do you want me to guide how to create **Power BI .pbix** file structure for GitHub?
 
-## 📢 Note:
-This is a **mock project** for portfolio purposes. Data is simulated and does not reflect real business information.
