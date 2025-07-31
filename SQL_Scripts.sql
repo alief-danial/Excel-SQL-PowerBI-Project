@@ -56,3 +56,4 @@ CROSS JOIN dbo.vw_MonthlySalesTrend
 CROSS JOIN dbo.vw_SalesByCategory
 CROSS JOIN dbo.vw_SalesByRegion
 CROSS JOIN dbo.vw_Top5Products;
+-
