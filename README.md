@@ -13,7 +13,7 @@ This project demonstrates an end-to-end Data Analytics workflow using **Excel**,
 |-------------|-------------|
 | Data Cleaning Sheet | Documented raw data cleaning steps. |
 | Lookup Sheet | Product Category Mapping using XLOOKUP/VLOOKUP. |
-| Pivot Table Reports | Sales summaries (Product-wise, Region-wise, Monthly). |
+| Pivot Table Reports | Sales summaries (Product, Region, Monthly). |
 | KPI Calculation Sheet | Manual formulas for Total Revenue, Average Order Value (AOV). |
 | Sales Dashboard Sheet | Visual Dashboard with Bar, Line, Pie Charts & Slicers. |
 
