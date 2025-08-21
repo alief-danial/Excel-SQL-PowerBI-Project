@@ -21,14 +21,15 @@ This project demonstrates an end-to-end Data Analytics workflow using **Excel**,
 | Deliverable | Description |
 |-------------|-------------|
 | SQL Database Schema | Table structure for Sales Data storage. |
-| SQL Views | Pre-built Views for reporting: Top Products, Monthly Sales, AOV, Region-wise Sales, Category-wise Sales. |
+| SQL Views | Pre-built Views for reporting: Top Products, Monthly Sales, AOV, Region Sales, Category Sales. |
 | Queries | SELECT queries for summaries & Power BI integration. |
 
 ### 3. Power BI Dashboard
 | Deliverable | Description |
 |-------------|-------------|
-| Power BI Dashboard | Interactive Dashboard with filters, slicers, and drill-down features. |
-| Data Connection | Live SQL Query or Excel Data Source used in Power BI. |
+| Data Connection | Live SQL Query used in Power BI. |
+| Power BI Dashboard | Interactive Dashboard with filters, & slicers. |
+
 
 ## 📈 Key Metrics & Features
 - **Total Revenue** by Product Category.
